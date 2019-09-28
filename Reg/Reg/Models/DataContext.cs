@@ -9,5 +9,7 @@ namespace Reg.Models
         public DataContext(): base ("DefaultConnection")
         {
         }
-}
+
+        public System.Data.Entity.DbSet<Reg.Models.Contact> Contacts { get; set; }
+    }
 }
