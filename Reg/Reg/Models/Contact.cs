@@ -1,21 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿
 
 namespace Reg.Models
 {
-    
-
+    using System;
+    using System.ComponentModel.DataAnnotations;
+   public enum TypeList
+   {
+        Hugo,
+        Homero,
+        Horacio,
+        Huevo,
+        Heladera
+    }
     public class Contact
     {
-          [Key]
+        [Key]
         public int Friendld { get; set; }
         [Required][Range (5,50)]
         public String Name { get; set; }
 
-        public int list { get; set; }
+        public TypeList List { get; set; }
         [Required]
         public String Email  { get; set; }
         
